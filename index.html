@@ -3,51 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>José Ferreira — Currículo</title>
-  <meta name="description" content="Currículo de José Ferreira — Desenvolvedor (Python/Django), Eng. da Computação em andamento." />
+  <title>José Ferreira de Sousa Neto — Currículo</title>
+  <meta name="description" content="Currículo profissional de José Ferreira de Sousa Neto — Professor de Matemática, Analista de Sistemas e Desenvolvedor." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg: #0b0c0f; --card: #12141a; --text:#e5e7eb; --muted:#9ca3af; --accent:#60a5fa; --chip:#1f2937; --border:#1f2937;
-    }
-    [data-theme="light"]{
-      --bg:#f8fafc; --card:#ffffff; --text:#0f172a; --muted:#475569; --accent:#2563eb; --chip:#eef2f7; --border:#e5e7eb;
-    }
+    :root{ --bg:#0b0c0f; --card:#12141a; --text:#e5e7eb; --muted:#9ca3af; --accent:#60a5fa; --chip:#1f2937; --border:#1f2937; }
+    [data-theme="light"]{ --bg:#f8fafc; --card:#ffffff; --text:#0f172a; --muted:#475569; --accent:#2563eb; --chip:#eef2f7; --border:#e5e7eb; }
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{
-      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
-      background:var(--bg); color:var(--text); line-height:1.6;
-    }
-    .container{max-width:980px; margin:0 auto; padding:24px}
-    header{
-      display:flex; gap:20px; align-items:center; justify-content:space-between; flex-wrap:wrap; margin-bottom:24px
-    }
-    .id{
-      display:flex; gap:16px; align-items:center;
-    }
-    .avatar{
-      width:72px; height:72px; border-radius:50%; background:linear-gradient(135deg,var(--accent),#14b8a6);
-      display:grid; place-items:center; color:#fff; font-weight:700; font-size:24px;
-    }
+    body{margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.6}
+    .container{max-width:1000px; margin:0 auto; padding:24px}
+    header{display:flex; gap:20px; align-items:center; justify-content:space-between; flex-wrap:wrap; margin-bottom:20px}
+    .id{display:flex; gap:16px; align-items:center}
+    .avatar{width:72px; height:72px; border-radius:50%; background:linear-gradient(135deg,var(--accent),#14b8a6); display:grid; place-items:center; color:#fff; font-weight:700; font-size:24px}
     .title h1{margin:0; font-size:28px}
     .title p{margin:2px 0 0; color:var(--muted)}
-    .actions{display:flex; gap:12px; align-items:center}
-    .btn{
-      padding:10px 14px; border-radius:10px; border:1px solid var(--border); background:var(--card); color:var(--text); text-decoration:none; font-weight:600;
-    }
+    .toolbar{display:flex; gap:8px; align-items:center}
+    .btn{padding:10px 14px; border-radius:10px; border:1px solid var(--border); background:var(--card); color:var(--text); text-decoration:none; font-weight:600}
     .btn:hover{transform:translateY(-1px)}
     .ghost{background:transparent}
-    .grid{
-      display:grid; grid-template-columns: 1fr; gap:16px;
-    }
-    @media(min-width:900px){
-      .grid{grid-template-columns: 2.2fr 1fr}
-    }
-    section{
-      background:var(--card); border:1px solid var(--border); border-radius:16px; padding:18px 18px;
-    }
+    .grid{display:grid; grid-template-columns:1fr; gap:16px}
+    @media(min-width:900px){.grid{grid-template-columns:2fr 1fr}}
+    section{background:var(--card); border:1px solid var(--border); border-radius:16px; padding:18px}
     h2{margin:0 0 8px; font-size:18px}
     .muted{color:var(--muted); font-size:14px}
     .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px}
@@ -56,22 +34,11 @@
     .left{min-width:120px; color:var(--muted); font-size:13px}
     .item h3{margin:0; font-size:16px}
     .item .meta{color:var(--muted); font-size:13px}
-    .projects{display:grid; gap:12px}
-    .project{
-      border:1px solid var(--border); border-radius:14px; padding:12px; background:transparent
-    }
-    .project h3{margin:0 0 4px; font-size:16px}
-    .links{display:flex; gap:12px; flex-wrap:wrap; margin-top:8px}
-    .link{
-      color:var(--accent); text-decoration:none; font-weight:600; font-size:14px;
-    }
     footer{color:var(--muted); text-align:center; margin:18px 0}
     .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0}
     .sep{height:1px; background:var(--border); margin:10px 0 14px}
-    .toolbar{display:flex; gap:8px; align-items:center}
-    .switch{
-      cursor:pointer; border:1px solid var(--border); border-radius:10px; padding:8px 12px; background:var(--card);
-    }
+    .switch{cursor:pointer; border:1px solid var(--border); border-radius:10px; padding:8px 12px; background:var(--card)}
+    @media print{ body{background:#fff; color:#000} section, header{border:0; box-shadow:none} .switch, .btn, .toolbar a{display:none !important} .container{padding:0} .grid{grid-template-columns:2fr 1fr} a{color:#000; text-decoration:none} }
   </style>
 </head>
 <body>
@@ -81,26 +48,24 @@
       <div class="id">
         <div class="avatar" aria-hidden="true">JF</div>
         <div class="title">
-          <h1>José Ferreira</h1>
-          <p>Desenvolvedor Python/Django • Eng. de Computação (em curso) • Técnico em Prótese Dentária</p>
+          <h1>José Ferreira de Sousa Neto</h1>
+          <p>Professor de Matemática • Analista de Sistemas • Desenvolvedor</p>
+          <p class="muted">Boa Viagem – CE, Brasil</p>
         </div>
       </div>
-      <div class="actions">
-        <nav class="toolbar" aria-label="Ferramentas">
-          <button id="themeToggle" class="switch" aria-label="Alternar tema">🌗 Tema</button>
-          <a class="btn ghost" href="mailto:seuemail@exemplo.com">E-mail</a>
-          <a class="btn" href="https://www.linkedin.com/in/seu-usuario" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a class="btn" href="https://github.com/seu-usuario" target="_blank" rel="noreferrer">GitHub</a>
-        </nav>
-      </div>
+      <nav class="toolbar" aria-label="Ferramentas">
+        <button id="themeToggle" class="switch" aria-label="Alternar tema">🌗 Tema</button>
+        <a class="btn ghost" href="mailto:jjose150697@gmail.com">E-mail</a>
+        <a class="btn" href="https://www.linkedin.com/in/jose-ferreira-9a659a242" target="_blank" rel="noreferrer">LinkedIn</a>
+      </nav>
     </header>
 
     <main id="conteudo" class="grid">
       <div class="col">
-        <section aria-labelledby="sobre">
-          <h2 id="sobre">Sobre</h2>
+        <section aria-labelledby="objetivo">
+          <h2 id="objetivo">Objetivo</h2>
           <div class="sep"></div>
-          <p>Sou desenvolvedor focado em <strong>Python/Django</strong>, apaixonado por construir sistemas limpos e eficientes. Tenho experiência com bancos de dados, APIs REST e deploy em PaaS (CapRover, Coolify). Também estudo e atuo em <strong>Prótese Dentária</strong>, trazendo visão prática e detalhista aos projetos.</p>
+          <p>Busco posição como <strong>Professor de Matemática</strong>, <strong>Analista de Sistemas</strong> ou <strong>Desenvolvedor</strong>, com interesse em projetos freelancer nas áreas de educação e tecnologia.</p>
         </section>
 
         <section aria-labelledby="experiencia">
@@ -108,84 +73,86 @@
           <div class="sep"></div>
 
           <div class="item">
-            <div class="left">2024 — 2025</div>
+            <div class="left">Nov 2017 — Atual</div>
             <div class="right">
-              <h3>Consultor / Dev Django — Rede Tecnológica</h3>
-              <p class="meta">SaaS de agendamento multiclínica, integrações n8n, WhatsApp API e Jazzmin Admin.</p>
+              <h3>Bradesco S.A — Bancário / Gerente de Posto de Atendimento</h3>
+              <p class="meta">Boa Viagem – CE</p>
               <ul>
-                <li>Modelagem e implementação de agendas, pacientes e prontuários (DRF).</li>
-                <li>Deploy em CapRover, logs e troubleshooting de containers.</li>
-                <li>Coleta e versionamento de estáticos para produção.</li>
+                <li>Atuação em operações bancárias, atendimento ao cliente e gestão de processos.</li>
               </ul>
             </div>
           </div>
 
           <div class="item">
-            <div class="left">2018 — 2024</div>
+            <div class="left">2013 — 2014</div>
             <div class="right">
-              <h3>Bradesco — Escriturário a Gerente de PA</h3>
-              <p class="meta">Atuação em operações, atendimento e gestão de processos sob alta pressão.</p>
+              <h3>EEM Dom Terceiro — Tutor de TI</h3>
+              <p class="meta">Boa Viagem – CE</p>
               <ul>
-                <li>Organização de rotinas, redução de retrabalho e foco em métricas.</li>
+                <li>Manutenção de computadores e programação de sistemas.</li>
               </ul>
             </div>
           </div>
-        </section>
 
-        <section aria-labelledby="projetos">
-          <h2 id="projetos">Projetos em Destaque</h2>
-          <div class="sep"></div>
-          <div class="projects">
-            <article class="project">
-              <h3>OdontoSys (SaaS)</h3>
-              <p>Plataforma multiclínica com agendamento, prontuário e integrações automáticas via n8n.</p>
-              <div class="links">
-                <a class="link" href="#" target="_blank" rel="noreferrer">Demo</a>
-                <a class="link" href="#" target="_blank" rel="noreferrer">Repositório</a>
-              </div>
-            </article>
-
-            <article class="project">
-              <h3>CLAI IDE</h3>
-              <p>IDE web para interpretar arquivos CLAI e gerar boilerplates em Django/React.</p>
-              <div class="links">
-                <a class="link" href="#" target="_blank" rel="noreferrer">Site</a>
-                <a class="link" href="#" target="_blank" rel="noreferrer">Repositório</a>
-              </div>
-            </article>
+          <div class="item">
+            <div class="left">2013 — 2014</div>
+            <div class="right">
+              <h3>EEM Dom Terceiro — Tutor de Matemática</h3>
+              <p class="meta">Boa Viagem – CE</p>
+              <ul>
+                <li>Aulas de Matemática para o Ensino Médio.</li>
+              </ul>
+            </div>
           </div>
         </section>
       </div>
 
       <aside>
-        <section aria-labelledby="skills">
-          <h2 id="skills">Skills</h2>
+        <section aria-labelledby="contatos">
+          <h2 id="contatos">Contatos</h2>
           <div class="sep"></div>
-          <div class="chips">
-            <span class="chip">Python</span><span class="chip">Django</span><span class="chip">DRF</span>
-            <span class="chip">HTMX</span><span class="chip">PostgreSQL</span><span class="chip">Docker</span>
-            <span class="chip">CapRover</span><span class="chip">Nginx</span><span class="chip">Linux</span>
-            <span class="chip">Git</span><span class="chip">JS</span><span class="chip">HTML/CSS</span>
-          </div>
+          <ul>
+            <li><strong>E-mail:</strong> <a class="link" href="mailto:jjose150697@gmail.com">jjose150697@gmail.com</a></li>
+            <li><strong>Telefone:</strong> <a class="link" href="tel:+5588993693516">(88) 9.9369-3516</a></li>
+            <li><strong>Endereço:</strong> Rua Ernesto Pereira de Sousa, 447 — Tibiquari, Boa Viagem/CE — 63870-000</li>
+            <li><strong>Data de nascimento:</strong> 15/06/1997</li>
+            <li><strong>Nacionalidade:</strong> Brasileira</li>
+            <li><strong>LinkedIn:</strong> <a class="link" href="https://www.linkedin.com/in/jose-ferreira-9a659a242" target="_blank" rel="noreferrer">/in/jose-ferreira-9a659a242</a></li>
+          </ul>
         </section>
 
         <section aria-labelledby="educacao">
           <h2 id="educacao">Educação</h2>
           <div class="sep"></div>
           <ul>
-            <li><strong>Engenharia da Computação</strong> — em andamento</li>
-            <li><strong>Licenciatura em Matemática</strong></li>
-            <li><strong>Pós em Segurança da Informação</strong> — em andamento</li>
-            <li><strong>Téc. em Prótese Dentária</strong> — em andamento</li>
+            <li><strong>Engenharia de Computação</strong> — Descomplica (Ago 2022 — Atual)</li>
+            <li><strong>Análise e Desenvolvimento de Sistemas</strong> — Anhanguera (Ago 2019 — Dez 2022)</li>
+            <li><strong>Licenciatura em Matemática</strong> — Anhanguera (Mar 2015 — Mar 2018)</li>
+            <li><strong>Pós-graduação em Engenharia de Software</strong> — Descomplica (Jun 2024 — Atual)</li>
+            <li><strong>MBA Segurança da Informação</strong> — Descomplica (Jan 2022 — Jul 2022)</li>
+            <li><strong>MBA Big Data e Inteligência Competitiva</strong> — Descomplica (Jan 2022 — Abr 2022)</li>
           </ul>
         </section>
 
-        <section aria-labelledby="extras">
-          <h2 id="extras">Idiomas & Certificações</h2>
+        <section aria-labelledby="habilidades">
+          <h2 id="habilidades">Habilidades</h2>
+          <div class="sep"></div>
+          <div class="chips">
+            <span class="chip">Django</span><span class="chip">HTML5</span><span class="chip">CSS3</span>
+            <span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">SQL</span>
+            <span class="chip">Machine Learning</span><span class="chip">JavaScript</span><span class="chip">Atendimento ao Cliente</span>
+            <span class="chip">Bootstrap Studio</span><span class="chip">Python</span><span class="chip">Linux</span>
+            <span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Docker</span>
+            <span class="chip">Matemática</span><span class="chip">Física</span>
+          </div>
+        </section>
+
+        <section aria-labelledby="idiomas">
+          <h2 id="idiomas">Idiomas</h2>
           <div class="sep"></div>
           <ul>
-            <li>Português (nativo), Inglês (técnico)</li>
-            <li>CPA-10</li>
+            <li>Inglês — elementary</li>
+            <li>Português — nativo</li>
           </ul>
         </section>
       </aside>
@@ -197,22 +164,17 @@
   </div>
 
   <script>
-    // Persistência do tema
     const root = document.documentElement;
     const saved = localStorage.getItem('theme');
     if(saved){ root.setAttribute('data-theme', saved); }
-
     document.getElementById('themeToggle').addEventListener('click', () => {
       const isLight = root.getAttribute('data-theme') === 'light';
       const next = isLight ? 'dark' : 'light';
       root.setAttribute('data-theme', next);
       localStorage.setItem('theme', next);
     });
-
-    // Data de "atualizado em"
     const d = new Date();
-    document.getElementById('today').textContent =
-      d.toLocaleDateString('pt-BR', { day:'2-digit', month:'2-digit', year:'numeric' });
+    document.getElementById('today').textContent = d.toLocaleDateString('pt-BR', {day:'2-digit', month:'2-digit', year:'numeric'});
   </script>
 </body>
 </html>
