@@ -6,39 +6,170 @@
   <title>José Ferreira de Sousa Neto — Currículo</title>
   <meta name="description" content="Currículo profissional de José Ferreira de Sousa Neto — Professor de Matemática, Analista de Sistemas e Desenvolvedor." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{ --bg:#0b0c0f; --card:#12141a; --text:#e5e7eb; --muted:#9ca3af; --accent:#60a5fa; --chip:#1f2937; --border:#1f2937; }
-    [data-theme="light"]{ --bg:#f8fafc; --card:#ffffff; --text:#0f172a; --muted:#475569; --accent:#2563eb; --chip:#eef2f7; --border:#e5e7eb; }
+    :root{
+      --bg:#0f0d0b;
+      --bg-alt:#1a1612;
+      --card:#171412;
+      --card-strong:#1f1a16;
+      --text:#f4f0ea;
+      --muted:#c8bfb3;
+      --accent:#f28c28;
+      --accent-2:#f0b429;
+      --chip:#221c18;
+      --border:#2a231e;
+      --shadow:0 20px 50px rgba(0,0,0,0.25);
+    }
+    [data-theme="light"]{
+      --bg:#f6f1ea;
+      --bg-alt:#f0e7da;
+      --card:#fffaf4;
+      --card-strong:#fff2e3;
+      --text:#1d1713;
+      --muted:#6b5f55;
+      --accent:#c45425;
+      --accent-2:#d18f1f;
+      --chip:#f1e6d7;
+      --border:#e4d7c8;
+      --shadow:0 20px 50px rgba(40,24,14,0.15);
+    }
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.6}
-    .container{max-width:1000px; margin:0 auto; padding:24px}
-    header{display:flex; gap:20px; align-items:center; justify-content:space-between; flex-wrap:wrap; margin-bottom:20px}
+    body{
+      margin:0;
+      font-family:"Space Grotesk",system-ui,Segoe UI,Roboto,Arial,sans-serif;
+      background:
+        radial-gradient(800px 400px at 10% -10%, rgba(242,140,40,0.18), transparent 60%),
+        radial-gradient(700px 500px at 110% 10%, rgba(240,180,41,0.18), transparent 55%),
+        linear-gradient(180deg, var(--bg), var(--bg-alt));
+      color:var(--text);
+      line-height:1.6;
+    }
+    .container{max-width:1100px; margin:0 auto; padding:32px 20px 40px}
+    header{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:18px;
+      margin-bottom:24px;
+      padding:22px;
+      border-radius:20px;
+      background:linear-gradient(135deg, var(--card), var(--card-strong));
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+      animation:fadeUp 600ms ease-out;
+    }
+    @media(min-width:900px){header{grid-template-columns:1.3fr 0.7fr; align-items:center}}
     .id{display:flex; gap:16px; align-items:center}
-    .avatar{width:72px; height:72px; border-radius:50%; background:linear-gradient(135deg,var(--accent),#14b8a6); display:grid; place-items:center; color:#fff; font-weight:700; font-size:24px}
-    .title h1{margin:0; font-size:28px}
-    .title p{margin:2px 0 0; color:var(--muted)}
-    .toolbar{display:flex; gap:8px; align-items:center}
-    .btn{padding:10px 14px; border-radius:10px; border:1px solid var(--border); background:var(--card); color:var(--text); text-decoration:none; font-weight:600}
-    .btn:hover{transform:translateY(-1px)}
+    .avatar{
+      width:76px;
+      height:76px;
+      border-radius:20px;
+      background:linear-gradient(140deg,var(--accent),var(--accent-2));
+      display:grid;
+      place-items:center;
+      color:#fff;
+      font-weight:700;
+      font-size:24px;
+      letter-spacing:1px;
+      box-shadow:0 12px 30px rgba(0,0,0,0.22);
+    }
+    .title h1{
+      margin:0;
+      font-family:"Fraunces","Times New Roman",serif;
+      font-size:30px;
+      letter-spacing:0.2px;
+    }
+    .title p{margin:4px 0 0; color:var(--muted)}
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(242,140,40,0.15);
+      color:var(--text);
+      font-size:12px;
+      border:1px solid rgba(242,140,40,0.3);
+      margin-top:8px;
+    }
+    .toolbar{display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:flex-start}
+    .btn{
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:var(--card);
+      color:var(--text);
+      text-decoration:none;
+      font-weight:600;
+      transition:transform 150ms ease, border 150ms ease, box-shadow 150ms ease;
+    }
+    .btn:hover{transform:translateY(-2px); border-color:rgba(242,140,40,0.5); box-shadow:0 8px 20px rgba(0,0,0,0.18)}
     .ghost{background:transparent}
-    .grid{display:grid; grid-template-columns:1fr; gap:16px}
-    @media(min-width:900px){.grid{grid-template-columns:2fr 1fr}}
-    section{background:var(--card); border:1px solid var(--border); border-radius:16px; padding:18px}
-    h2{margin:0 0 8px; font-size:18px}
+    .primary{background:linear-gradient(135deg,var(--accent),var(--accent-2)); color:#1a120b; border:1px solid transparent}
+    .grid{display:grid; grid-template-columns:1fr; gap:18px}
+    @media(min-width:950px){.grid{grid-template-columns:2fr 1fr}}
+    section{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:18px;
+      box-shadow:var(--shadow);
+    }
+    section + section{margin-top:18px}
+    h2{
+      margin:0 0 8px;
+      font-size:18px;
+      font-family:"Fraunces","Times New Roman",serif;
+      letter-spacing:0.2px;
+    }
     .muted{color:var(--muted); font-size:14px}
     .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px}
-    .chip{background:var(--chip); color:var(--text); padding:6px 10px; border-radius:999px; font-size:13px; border:1px solid var(--border)}
-    .item{display:flex; gap:12px}
-    .left{min-width:120px; color:var(--muted); font-size:13px}
+    .chip{
+      background:var(--chip);
+      color:var(--text);
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:13px;
+      border:1px solid var(--border);
+    }
+    .item{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:8px;
+      padding:10px 0;
+    }
+    .item + .item{border-top:1px dashed var(--border); margin-top:10px}
+    @media(min-width:700px){.item{grid-template-columns:140px 1fr; align-items:start}}
+    .left{color:var(--muted); font-size:13px}
     .item h3{margin:0; font-size:16px}
     .item .meta{color:var(--muted); font-size:13px}
-    footer{color:var(--muted); text-align:center; margin:18px 0}
+    .card-list li{margin-bottom:6px}
+    footer{color:var(--muted); text-align:center; margin:22px 0 8px}
     .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0}
-    .sep{height:1px; background:var(--border); margin:10px 0 14px}
-    .switch{cursor:pointer; border:1px solid var(--border); border-radius:10px; padding:8px 12px; background:var(--card)}
-    @media print{ body{background:#fff; color:#000} section, header{border:0; box-shadow:none} .switch, .btn, .toolbar a{display:none !important} .container{padding:0} .grid{grid-template-columns:2fr 1fr} a{color:#000; text-decoration:none} }
+    .sep{height:1px; background:linear-gradient(90deg, transparent, var(--border), transparent); margin:10px 0 14px}
+    .switch{
+      cursor:pointer;
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:8px 12px;
+      background:var(--card);
+      color:var(--text);
+      font-weight:600;
+    }
+    .link{color:inherit}
+    .aside-stack section{background:linear-gradient(135deg, var(--card), var(--card-strong))}
+    @keyframes fadeUp{from{opacity:0; transform:translateY(12px)} to{opacity:1; transform:translateY(0)}}
+    @media (prefers-reduced-motion: reduce){*{animation:none !important; transition:none !important}}
+    @media print{
+      body{background:#fff; color:#000}
+      section, header{border:0; box-shadow:none}
+      .switch, .btn, .toolbar a{display:none !important}
+      .container{padding:0}
+      .grid{grid-template-columns:2fr 1fr}
+      a{color:#000; text-decoration:none}
+    }
   </style>
 </head>
 <body>
@@ -51,12 +182,13 @@
           <h1>José Ferreira de Sousa Neto</h1>
           <p>Professor de Matemática • Analista de Sistemas • Desenvolvedor</p>
           <p class="muted">Boa Viagem – CE, Brasil</p>
+          <span class="badge">Disponível para projetos de educação e tecnologia</span>
         </div>
       </div>
       <nav class="toolbar" aria-label="Ferramentas">
         <button id="themeToggle" class="switch" aria-label="Alternar tema">🌗 Tema</button>
         <a class="btn ghost" href="mailto:jjose150697@gmail.com">E-mail</a>
-        <a class="btn" href="https://www.linkedin.com/in/jose-ferreira-9a659a242" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn primary" href="https://www.linkedin.com/in/jose-ferreira-9a659a242" target="_blank" rel="noreferrer">LinkedIn</a>
       </nav>
     </header>
 
@@ -107,11 +239,11 @@
         </section>
       </div>
 
-      <aside>
+      <aside class="aside-stack">
         <section aria-labelledby="contatos">
           <h2 id="contatos">Contatos</h2>
           <div class="sep"></div>
-          <ul>
+          <ul class="card-list">
             <li><strong>E-mail:</strong> <a class="link" href="mailto:jjose150697@gmail.com">jjose150697@gmail.com</a></li>
             <li><strong>Telefone:</strong> <a class="link" href="tel:+5588993693516">(88) 9.9369-3516</a></li>
             <li><strong>Endereço:</strong> Rua Ernesto Pereira de Sousa, 447 — Tibiquari, Boa Viagem/CE — 63870-000</li>
@@ -124,7 +256,7 @@
         <section aria-labelledby="educacao">
           <h2 id="educacao">Educação</h2>
           <div class="sep"></div>
-          <ul>
+          <ul class="card-list">
             <li><strong>Engenharia de Computação</strong> — Descomplica (Ago 2022 — Atual)</li>
             <li><strong>Análise e Desenvolvimento de Sistemas</strong> — Anhanguera (Ago 2019 — Dez 2022)</li>
             <li><strong>Licenciatura em Matemática</strong> — Anhanguera (Mar 2015 — Mar 2018)</li>
@@ -150,7 +282,7 @@
         <section aria-labelledby="idiomas">
           <h2 id="idiomas">Idiomas</h2>
           <div class="sep"></div>
-          <ul>
+          <ul class="card-list">
             <li>Inglês — elementary</li>
             <li>Português — nativo</li>
           </ul>
